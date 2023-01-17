@@ -1,3 +1,11 @@
+# TODO: scrape_for_books
+
+# TODO: Scraping for books off of http://books.toscrape.com/. 
+
+# TODO: CLI Feature 1
+# TODO: CLI Feature 2
+# TODO: CLI Feature 3
+
 # BookTracker
 
 TODO: Delete this and the text below, and describe your gem
