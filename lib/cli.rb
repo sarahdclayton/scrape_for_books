@@ -1,5 +1,5 @@
 class CLI
-    def run
+    def initialize
         system('clear')
         greeting
         while menu != exit
@@ -16,31 +16,14 @@ class CLI
         puts "See you later!"
     end
 
-    def menu
-        # list options
-        list_options
-
-        # ask users what he/she wants
-        puts "Which one do you want?"
-        input = gets.chomp 
-        choose_option(input)
-        return input
-    end
-
-    def list_options
-        puts "1. "
-        puts "2. "
-        puts "3. "
-    end
-
-    def choose_option(input)
-        case input
-        when "1"
-            puts "You choose option 1"
-        when "2"
-            puts "You choose option 2"
-        when "3"
-            puts "You choose option 3"
+    def list_books_in_stock
+        puts "Do you want to look for books that are in stock?"
+        look_for_in_stock_books = gets.chomp 
+        if look_for_in_stock_books == ""
+            puts 
         end
     end
 end
+
+ 
+
