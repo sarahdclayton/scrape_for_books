@@ -2,8 +2,7 @@ class CLI
     def run
         system('clear')
         greeting
-        while list_categories != exit
-        end
+        list_categories 
         list_categories
         end_program
     end
