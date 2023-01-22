@@ -1,10 +1,10 @@
 class CLI
-    def initialize
+    def run
         system('clear')
         greeting
-        while menu != exit
+        while list_categories != exit
         end
-        list_options
+        list_categories
         end_program
     end
 
@@ -16,11 +16,14 @@ class CLI
         puts "See you later!"
     end
 
-    def list_books_in_stock
-        puts "Do you want to look for books that are in stock?"
-        look_for_in_stock_books = gets.chomp 
-        if look_for_in_stock_books == ""
-            puts 
+    def list_categories 
+        category_results = nil
+
+        while category_results != 'exit'
+         puts "What category do you want to browse?"
+         puts "If you want to stop, enter exit."
+         category_results = gets.chomp
+         Scraper.scrape_categories(category_results)
         end
     end
 end

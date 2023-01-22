@@ -10,7 +10,7 @@ require 'open-uri'
 class Scraper
     SCRAPE_URL = "http://books.toscrape.com/index.html"
 
-    def self.scrape_book_title 
+    def self.scrape_categories  
         doc = Nokogiri::HTML(URI.open("http://books.toscrape.com/index.html"))
         side_category_element = doc.css(".side_categories .nav-list")
         # array of category elements
@@ -24,4 +24,4 @@ class Scraper
 end
 
 
-Scraper.scrape_book_title 
+Scraper.scrape_categories
