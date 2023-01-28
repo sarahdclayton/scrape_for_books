@@ -6,6 +6,7 @@ require 'nokogiri'
 # turns into a file instance....URI.open("url link")
 require 'open-uri'
 # require_relative 'book.rb'
+require_relative 'category.rb'
 
 class Scraper
     SCRAPE_URL = "http://books.toscrape.com/index.html"
@@ -19,9 +20,9 @@ class Scraper
         # iterate through category_elements 
         category_elements.each_with_index do |category_element, i|
             puts "#{i + 1} #{ category_element.text}"
+            Category.new(category_element.text.strip, "http://books.toscrape.com/#{category_element.attributes["href"].value}")
         end 
     end
 end
-
 
 Scraper.scrape_categories
